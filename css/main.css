@@ -52,8 +52,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 128px;
-  width: 128px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
   transform: translateZ(30px) translateY(15px);
