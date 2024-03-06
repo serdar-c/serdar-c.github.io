@@ -180,7 +180,7 @@ body {
   left: 0;
   margin: 0;
   padding: 0;
-  background: #371B58;
+  background-color: #371B58;
   z-index: -1;
 }
 
@@ -191,17 +191,33 @@ body {
 }
 
 .background .square {
-  background: #5f4979;
+  width: 6%;
+  aspect-ratio: 1;
+  bottom: -6vw;
+  clip-path: polygon(100% 50%, 50% 100%, 0% 50%, 50% 0%, 100% 50%, 50% 13%, 13% 50%, 50% 87%, 87% 50%, 50% 13%);
+  background-color: #5f4979;
 }
 
 .background .triangle {
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-  background: #5f4979;
+  width: 6%;
+  aspect-ratio: 1;
+  bottom: -6vw;
+  clip-path: polygon(100% 50%, 25% 93.3%, 25% 6.7%, 100% 50%, 33.5% 21.42%, 33.5% 78.58%, 83% 50%, 33.5% 21.42%);
+  background-color: #5f4979;
 }
 
 .background .circle {
+  width: 5%;
+  aspect-ratio: 1;
+  bottom: -5vw;
   border-radius: 50%;
-  background: #5f4979;
+  background: radial-gradient(circle at center, transparent 55%, #5f4979 0);
+}
+
+.background .x-shape {
+  width: 5%;
+  aspect-ratio: 1;
+  bottom: -5vw;
 }
 
 .background .x-shape:before,
@@ -209,8 +225,8 @@ body {
   content: '';
   position: absolute;
   width: 100%;
-  height: 15%;
-  background: #5f4979;
+  height: 10%;
+  background-color: #5f4979;
   top: 50%;
 }
 
@@ -224,192 +240,120 @@ body {
 
 .background li:nth-child(1) {
   left: 4%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 5s;
 }
 
 .background li:nth-child(2) {
   left: 8%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 27s;
 }
 
 .background li:nth-child(3) {
   left: 12%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 23s;
 }
 
 .background li:nth-child(4) {
   left: 16%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 41s;
 }
 
 .background li:nth-child(5) {
   left: 20%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 11s;
 }
 
 .background li:nth-child(6) {
   left: 24%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 15s;
 }
 
 .background li:nth-child(7) {
   left: 28%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 7s;
 }
 
 .background li:nth-child(8) {
   left: 32%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 3s;
 }
 
 .background li:nth-child(9) {
   left: 36%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 33s;
 }
 
 .background li:nth-child(10) {
   left: 40%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 47s;
 }
 
 .background li:nth-child(11) {
   left: 44%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 45s;
 }
 
 .background li:nth-child(12) {
   left: 48%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 1s;
 }
 
 .background li:nth-child(13) {
   left: 52%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 29s;
 }
 
 .background li:nth-child(14) {
   left: 56%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 43s;
 }
 
 .background li:nth-child(15) {
   left: 60%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 19s;
 }
 
 .background li:nth-child(16) {
   left: 64%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 13s;
 }
 
 .background li:nth-child(17) {
   left: 68%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 17s;
 }
 
 .background li:nth-child(18) {
   left: 72%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 39s;
 }
 
 .background li:nth-child(19) {
   left: 76%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 9s;
 }
 
 .background li:nth-child(20) {
   left: 80%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 37s;
 }
 
 .background li:nth-child(21) {
   left: 84%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 31s;
 }
 
 .background li:nth-child(22) {
   left: 88%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 35s;
 }
 
 .background li:nth-child(23) {
   left: 92%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 21s;
 }
 
 .background li:nth-child(24) {
   left: 96%;
-  width: 5%;
-  padding-top: 5%;
-  bottom: -5vw;
   animation-delay: 25s;
 }
