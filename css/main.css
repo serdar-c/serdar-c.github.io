@@ -48,7 +48,7 @@ body {
 }
 
 .card .banner .avatar {
-  background-image: url('../img/avatar.png');
+  background-image: url('https://avatars.githubusercontent.com/u/161735288?v=4');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
