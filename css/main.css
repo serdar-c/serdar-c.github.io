@@ -19,21 +19,59 @@ body {
   width: 100%;
 }
 
+#pages {
+  transform-style: preserve-3d;
+  height: 442px;
+}
+
 .card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 2rem;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  margin: auto;
+}
+
+.card .sidenav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 375px;
-  background-color: #4C3575;
-  border-radius: 2rem;
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
-  margin: auto;
-  gap: 1rem;
-  transform-style: preserve-3d;
-  transform: perspective(300px);
+  background-color: #5B4B8A;
+  border-radius: 2rem 0 0 2rem;
 }
 
-.card .banner {
+.card .sidenav .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2rem 0 0 2rem;
+  cursor: pointer;
+}
+
+.card .sidenav .nav-item:hover {
+  background-color: #4C3575;
+}
+
+.card .sidenav .active {
+  background-color: #4C3575;
+}
+
+.card .profile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 375px;
+  gap: 1rem;
+  transform-style: preserve-3d;
+  background-color: #4C3575;
+  border-radius: 0 2rem 2rem 0;
+  transition: transform 200ms, border-radius 200ms;
+  height: 100%;
+}
+
+.card .profile .banner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,7 +85,7 @@ body {
   transform-style: preserve-3d;
 }
 
-.card .banner .avatar {
+.card .profile .banner .avatar {
   background-image: url('https://avatars.githubusercontent.com/u/161735288?v=4');
   background-position: center;
   background-repeat: no-repeat;
@@ -56,17 +94,17 @@ body {
   width: 120px;
   border-radius: 50%;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
-  transform: translateZ(30px) translateY(15px);
+  transform: translateZ(30px) translateY(8px);
 }
 
-.card .title {
+.card .profile .title {
   margin-top: 0.2rem;
   padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: calc(100% - 4rem);
+  width: calc(100% - 2.5rem);
   background-color: #5B4B8A;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
@@ -77,7 +115,7 @@ body {
   color: #fff;
 }
 
-.card .content {
+.card .profile .content {
   margin-top: 0.2rem;
   margin-bottom: 2rem;
   display: flex;
@@ -86,7 +124,7 @@ body {
   align-items: center;
   gap: 10px;
   padding: 1rem;
-  width: calc(100% - 4rem);
+  width: calc(100% - 2.5rem);
   background-color: #5B4B8A;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
@@ -96,12 +134,76 @@ body {
   color: #fff;
 }
 
-.title .tilt {
+.card .profile .title .tilt {
   transform: translateZ(15px) translateY(-1px);
 }
 
-.content .tilt {
-  transform: translateZ(15px) translateY(-8px);
+.card .profile .content .tilt {
+  transform: translateZ(15px) translateY(-4px);
+}
+
+.card .portfolio {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 375px;
+  gap: 1.5rem;
+  transform-style: preserve-3d;
+  background-color: #4C3575;
+  border-radius: 0 2rem 2rem 0;
+  padding: 1.5rem;
+  transition: transform 200ms, border-radius 200ms;
+  height: 100%;
+}
+
+.card .portfolio .title {
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: calc(100% - 2.5rem);
+  background-color: #5B4B8A;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transform-style: preserve-3d;
+  transform: translateZ(30px);
+  color: #fff;
+}
+
+.card .portfolio .title .tilt {
+  transform: translateZ(15px) translateY(1px);
+}
+
+.card .portfolio .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  transform-style: preserve-3d;
+  transform: translateZ(30px);
+  max-height: 340px;
+  overflow-y: scroll;
+}
+
+.card .portfolio .gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  filter: grayscale(1);
+  transition: filter 200ms, opacity 500ms;
+  opacity: 0;
+}
+
+.card .portfolio .gallery img:hover {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  filter: grayscale(0);
 }
 
 .footer {
@@ -156,7 +258,7 @@ body {
   border-color: #7858A6 transparent transparent transparent;
 }
 
-@media only screen and (max-width: 415px) {
+@media (max-width: 415px) {
   .tooltip .tooltip-text {
     white-space: normal;
   }
@@ -356,4 +458,80 @@ body {
 .background li:nth-child(24) {
   left: 96%;
   animation-delay: 25s;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5B4B8A;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #635296;
+}
+
+.zoomIn {
+  transform: scale(1) translateX(2rem) !important;
+  border-radius: 2rem !important;
+}
+
+.zoomOut {
+  transform: scale(0) translateX(2rem) !important;
+  border-radius: 2rem !important;
+}
+
+.move {
+  transform: scale(1) translateX(2rem) !important;
+  border-radius: 2rem !important;
+}
+
+.active {
+  display: flex !important;
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card .sidenav {
+    flex-direction: row;
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  .card .sidenav .nav-item {
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  .card .profile {
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  .card .portfolio {
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  .zoomIn {
+    transform: scale(1) translateY(2rem) !important;
+    border-radius: 2rem !important;
+  }
+
+  .zoomOut {
+    transform: scale(0) translateY(2rem) !important;
+    border-radius: 2rem !important;
+  }
+
+  .move {
+    transform: scale(1) translateY(2rem) !important;
+    border-radius: 2rem !important;
+  }
 }

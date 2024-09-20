@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Serdar C. - Portfolio</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
@@ -37,15 +38,52 @@
     <li class="x-shape"></li>
   </ul>
   <div class="main">
-    <div class="card" data-tilt>
-      <div class="banner">
-        <div class="avatar"></div>
+    <div class="card" data-tilt data-tilt-perspective="1000">
+      <div class="sidenav">
+        <div id="profile" class="nav-item active">
+          <i class="fa-solid fa-house" style="font-size: 36px; color: white"></i>
+        </div>
+        <div id="portfolio" class="nav-item">
+          <i class="fa-solid fa-images" style="font-size: 36px; color: white"></i>
+        </div>
       </div>
-      <div class="title">
-        <div class="tilt">Serdar C.</div>
-      </div>
-      <div class="content">
-        <div class="tilt">👨🏽‍💻 software developer<br>🎮 rc enthusiast<br>🚁 drone pilot<br>🖨️ 3d printing</div>
+      <div id="pages">
+        <div id="profile" class="profile active">
+          <div class="banner">
+            <div class="avatar"></div>
+          </div>
+          <div class="title">
+            <div class="tilt">Serdar C.</div>
+          </div>
+          <div class="content">
+            <div class="tilt">👨🏽‍💻 software developer<br>🎮 rc enthusiast<br>🚁 drone pilot<br>🖨️ 3d printing</div>
+          </div>
+        </div>
+        <div id="portfolio" class="portfolio">
+          <div class="title">
+            <div class="tilt">My 3D Prints</div>
+          </div>
+          <div class="gallery">
+            <a data-fslightbox="gallery" data-type="image" href="img/portfolio/budgie.jpg">
+              <img data-src="img/portfolio/budgie.jpg">
+            </a>
+            <a data-fslightbox="gallery" data-type="image" href="img/portfolio/chicken.jpg">
+              <img data-src="img/portfolio/chicken.jpg">
+            </a>
+            <a data-fslightbox="gallery" data-type="image" href="img/portfolio/furnace1.jpg">
+              <img data-src="img/portfolio/furnace1.jpg">
+            </a>
+            <a data-fslightbox="gallery" data-type="image" href="img/portfolio/furnace2.jpg">
+              <img data-src="img/portfolio/furnace2.jpg">
+            </a>
+            <a data-fslightbox="gallery" data-type="image" href="img/portfolio/grogu.jpg">
+              <img data-src="img/portfolio/grogu.jpg">
+            </a>
+            <a data-fslightbox="gallery" data-type="image" href="img/portfolio/orbb.jpg">
+              <img data-src="img/portfolio/orbb.jpg">
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -53,5 +91,7 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.min.js"></script>
+<script src="js/main.js"></script>
 
 </html>
